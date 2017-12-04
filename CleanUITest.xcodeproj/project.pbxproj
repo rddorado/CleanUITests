@@ -14,6 +14,13 @@
 		D1A080DE1FD55E6900643CEE /* CleanUITestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080DD1FD55E6900643CEE /* CleanUITestUITests.swift */; };
 		D1A080E91FD55EC100643CEE /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080E81FD55EC100643CEE /* MainRouter.swift */; };
 		D1A080EB1FD55FF000643CEE /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080EA1FD55FF000643CEE /* UITestCase.swift */; };
+		D1A080ED1FD5653000643CEE /* CatNavigationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080EC1FD5653000643CEE /* CatNavigationTest.swift */; };
+		D1A080F01FD5656900643CEE /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080EF1FD5656900643CEE /* HomeScreen.swift */; };
+		D1A080F31FD5731E00643CEE /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080F21FD5731E00643CEE /* AppAction.swift */; };
+		D1A080F51FD5734D00643CEE /* ScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080F41FD5734D00643CEE /* ScreenAction.swift */; };
+		D1A080F71FD5755200643CEE /* CatsListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080F61FD5755200643CEE /* CatsListScreen.swift */; };
+		D1A080FA1FD5757C00643CEE /* ScreenProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080F91FD5757C00643CEE /* ScreenProperties.swift */; };
+		D1A080FC1FD5760500643CEE /* ScreenTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080FB1FD5760500643CEE /* ScreenTemplate.swift */; };
 		FD40714CD4E73A12A75A2711 /* Pods_CleanUITestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E0E7D5D29E21A9FF58689E /* Pods_CleanUITestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +49,13 @@
 		D1A080DF1FD55E6900643CEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1A080E81FD55EC100643CEE /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		D1A080EA1FD55FF000643CEE /* UITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
+		D1A080EC1FD5653000643CEE /* CatNavigationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatNavigationTest.swift; sourceTree = "<group>"; };
+		D1A080EF1FD5656900643CEE /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		D1A080F21FD5731E00643CEE /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		D1A080F41FD5734D00643CEE /* ScreenAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAction.swift; sourceTree = "<group>"; };
+		D1A080F61FD5755200643CEE /* CatsListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListScreen.swift; sourceTree = "<group>"; };
+		D1A080F91FD5757C00643CEE /* ScreenProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenProperties.swift; sourceTree = "<group>"; };
+		D1A080FB1FD5760500643CEE /* ScreenTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTemplate.swift; sourceTree = "<group>"; };
 		E9166FD0CE95AD48B9D9A00C /* Pods-CleanUITestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUITestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanUITestUITests/Pods-CleanUITestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F6A81E733A39F50F882D3138 /* Pods-CleanUITest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanUITest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanUITest/Pods-CleanUITest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,11 +135,42 @@
 		D1A080DC1FD55E6900643CEE /* CleanUITestUITests */ = {
 			isa = PBXGroup;
 			children = (
+				D1A080F81FD5756800643CEE /* Screens */,
+				D1A080F11FD572F000643CEE /* Actions */,
 				D1A080DD1FD55E6900643CEE /* CleanUITestUITests.swift */,
+				D1A080EE1FD5653B00643CEE /* CatNavigation */,
 				D1A080DF1FD55E6900643CEE /* Info.plist */,
 				D1A080EA1FD55FF000643CEE /* UITestCase.swift */,
 			);
 			path = CleanUITestUITests;
+			sourceTree = "<group>";
+		};
+		D1A080EE1FD5653B00643CEE /* CatNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				D1A080EC1FD5653000643CEE /* CatNavigationTest.swift */,
+			);
+			path = CatNavigation;
+			sourceTree = "<group>";
+		};
+		D1A080F11FD572F000643CEE /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				D1A080F21FD5731E00643CEE /* AppAction.swift */,
+				D1A080F41FD5734D00643CEE /* ScreenAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		D1A080F81FD5756800643CEE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D1A080EF1FD5656900643CEE /* HomeScreen.swift */,
+				D1A080F61FD5755200643CEE /* CatsListScreen.swift */,
+				D1A080F91FD5757C00643CEE /* ScreenProperties.swift */,
+				D1A080FB1FD5760500643CEE /* ScreenTemplate.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,8 +383,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A080F01FD5656900643CEE /* HomeScreen.swift in Sources */,
+				D1A080F51FD5734D00643CEE /* ScreenAction.swift in Sources */,
+				D1A080FC1FD5760500643CEE /* ScreenTemplate.swift in Sources */,
 				D1A080DE1FD55E6900643CEE /* CleanUITestUITests.swift in Sources */,
 				D1A080EB1FD55FF000643CEE /* UITestCase.swift in Sources */,
+				D1A080F71FD5755200643CEE /* CatsListScreen.swift in Sources */,
+				D1A080ED1FD5653000643CEE /* CatNavigationTest.swift in Sources */,
+				D1A080FA1FD5757C00643CEE /* ScreenProperties.swift in Sources */,
+				D1A080F31FD5731E00643CEE /* AppAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
