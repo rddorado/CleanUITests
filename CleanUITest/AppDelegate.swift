@@ -1,46 +1,44 @@
-//
-//  AppDelegate.swift
-//  CleanUITest
-//
-//  Created by Ronaldo II Dorado on 4/12/17.
-//  Copyright © 2017 Ronaldo II Dorado. All rights reserved.
-//
-
 import UIKit
 
+enum Tab: Int {
+    case home, cats, dogs
+    
+    func getViewController(with mainRouter: MainRouter) -> UIViewController {
+        switch self {
+        case .home:
+            return mainRouter.homeFeatureRouter.getMainScreen()
+        case .cats:
+            return mainRouter.catFeatureRouter.getMainScreen()
+        case .dogs:
+            return mainRouter.dogFeatureRouter.getMainScreen()
+        }
+    }
+}
+
 @UIApplicationMain
+
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let mainRouter = MainRouter()
+    let tabBarController = UITabBarController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+
+        tabBarController.setViewControllers([Tab.home.getViewController(with: mainRouter),
+                                              Tab.cats.getViewController(with: mainRouter),
+                                              Tab.dogs.getViewController(with: mainRouter)], animated: true)
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
         return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    
+    class func switchTab(_ tab: Tab) {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            appDelegate.tabBarController.selectedIndex = tab.rawValue
+        }
     }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-
 }
 

@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  CleanUITest
+//  DogFeature
 //
-//  Created by Ronaldo II Dorado on 4/12/17.
-//  Copyright © 2017 Ronaldo II Dorado. All rights reserved.
+//  Created by ronaldo on 06/02/2017.
+//  Copyright (c) 2017 ronaldo. All rights reserved.
 //
 
 import UIKit
@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
