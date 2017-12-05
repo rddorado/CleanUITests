@@ -18,11 +18,11 @@ class CatNavigationTest: XCTestCase {
     }
     
     func testShouldViewAllCatsFromHomeTab() {
-        let homeScreen = HomeScreen()
-        homeScreen.action.tapShowCatsButton()
+        let homeScreen = HomeScreen(log: Log())
+        homeScreen.action.tapShowCatsButton(log: Log())
         
-        let catsListScreen = CatsListScreen()
-        catsListScreen.action.tapCell()
+        let catsListScreen = CatsListScreen(log: Log())
+        catsListScreen.action.tapAnyCell()
         
         
 //        let showCatsButton = XCUIApplication().buttons["Show Cats"]

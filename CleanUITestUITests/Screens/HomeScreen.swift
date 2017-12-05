@@ -11,27 +11,21 @@ import Nimble
 
 
 class HomeScreenAppAction: AppAction {
-}
-
-class HomeScreenAction: ScreenAction {
-    typealias AppActionType = HomeScreenAppAction
-    var appAction:HomeScreenAppAction = HomeScreenAppAction()
-    
     func tapShowCatsButton(log: Log = Log()) {
-        appAction.tapButton(id: "Show Cats", log: log)
+        self.tapButton(id: "Show Cats", log: log)
     }
 }
 
 class HomeScreen: ScreenProperties {
     
-    var action = HomeScreenAction()
+    var action = HomeScreenAppAction()
 
-    init(file: String = #file, line: UInt = #line) {
+    init(log: Log = Log()) {
         let showCatsButton = XCUIApplication().buttons["Show Cats"]
         let showDogsButton = XCUIApplication().buttons["Show Dogs"]
    
-        expect(showCatsButton.exists, file: file, line: line).to(beTrue(), description: screenNotFoundDescription)
-        expect(showDogsButton.exists, file: file, line: line).to(beTrue(), description: screenNotFoundDescription)
+        expect(showCatsButton.exists, log: log).to(beTrue(), description: screenNotFoundDescription)
+        expect(showDogsButton.exists, log: log).to(beTrue(), description: screenNotFoundDescription)
     }
 }
 

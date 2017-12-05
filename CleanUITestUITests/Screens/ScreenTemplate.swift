@@ -12,14 +12,9 @@ import Nimble
 class _TemplateName_AppAction: AppAction {
 }
 
-class _TemplateName_ScreenAction: ScreenAction {
-    typealias AppActionType = _TemplateName_AppAction
-    var appAction:_TemplateName_AppAction = _TemplateName_AppAction()
-}
-
 class _TemplateName_Screen: ScreenProperties {
     
-    var action = _TemplateName_ScreenAction()
+    var action = _TemplateName_AppAction()
     
     init(file: String = #file, line: UInt = #line) {
         let element = XCUIApplication().otherElements.allElementsBoundByIndex[0] // TODO: replace this

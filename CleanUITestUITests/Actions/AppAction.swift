@@ -9,17 +9,15 @@
 import XCTest
 import Nimble
 
-protocol AppAction {
-    var app: XCUIApplication { get }
-    func tapButton(id: String, insideElement: XCUIElement?, waitUntilExists: Double, waitUntilHittable: Double, log: Log)
-}
-
-extension AppAction {
+class AppAction {
     var app: XCUIApplication {
         return XCUIApplication()
     }
-    
-    func tapButton(id: String, insideElement: XCUIElement? = nil, waitUntilExists: Double = 10, waitUntilHittable: Double = 10, log: Log = Log()) {
+}
+
+// MARK:- Tap Actions
+extension AppAction {
+    internal func tapButton(id: String, insideElement: XCUIElement? = nil, waitUntilExists: Double = 10, waitUntilHittable: Double = 10, log: Log = Log()) {
         
         let errrorDescription =  "button[\"\(id)\"] cannot be found"
         var button = self.app.buttons[id]
@@ -33,5 +31,12 @@ extension AppAction {
         expect(button.exists, log: log).toEventually(beTrue(), timeout: waitUntilExists, description: errrorDescription)
         expect(button.isHittable, log: log).toEventually(beTrue(), timeout: waitUntilHittable, description: errrorDescription)
         button.tap()
+    }
+    
+    internal func tapCell(id: String, waitUntilExists: Double = 10 , waitUntilHittable: Double = 10, log: Log = Log()) {
+        let errrorDescription =  "cell[\"\(id)\"] cannot be found"
+        let cell = XCUIApplication().collectionViews.cells[id]
+        expect(cell.exists, log: log).toEventually(beTrue(), timeout:3, description: errrorDescription)
+        cell.tap()
     }
 }

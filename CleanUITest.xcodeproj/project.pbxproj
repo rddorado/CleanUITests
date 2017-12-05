@@ -17,7 +17,6 @@
 		D1A080ED1FD5653000643CEE /* CatNavigationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080EC1FD5653000643CEE /* CatNavigationTest.swift */; };
 		D1A080F01FD5656900643CEE /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080EF1FD5656900643CEE /* HomeScreen.swift */; };
 		D1A080F31FD5731E00643CEE /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080F21FD5731E00643CEE /* AppAction.swift */; };
-		D1A080F51FD5734D00643CEE /* ScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080F41FD5734D00643CEE /* ScreenAction.swift */; };
 		D1A080F71FD5755200643CEE /* CatsListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080F61FD5755200643CEE /* CatsListScreen.swift */; };
 		D1A080FA1FD5757C00643CEE /* ScreenProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080F91FD5757C00643CEE /* ScreenProperties.swift */; };
 		D1A080FC1FD5760500643CEE /* ScreenTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080FB1FD5760500643CEE /* ScreenTemplate.swift */; };
@@ -52,7 +51,6 @@
 		D1A080EC1FD5653000643CEE /* CatNavigationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatNavigationTest.swift; sourceTree = "<group>"; };
 		D1A080EF1FD5656900643CEE /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		D1A080F21FD5731E00643CEE /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
-		D1A080F41FD5734D00643CEE /* ScreenAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAction.swift; sourceTree = "<group>"; };
 		D1A080F61FD5755200643CEE /* CatsListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListScreen.swift; sourceTree = "<group>"; };
 		D1A080F91FD5757C00643CEE /* ScreenProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenProperties.swift; sourceTree = "<group>"; };
 		D1A080FB1FD5760500643CEE /* ScreenTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTemplate.swift; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				D1A080F21FD5731E00643CEE /* AppAction.swift */,
-				D1A080F41FD5734D00643CEE /* ScreenAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -384,7 +381,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1A080F01FD5656900643CEE /* HomeScreen.swift in Sources */,
-				D1A080F51FD5734D00643CEE /* ScreenAction.swift in Sources */,
 				D1A080FC1FD5760500643CEE /* ScreenTemplate.swift in Sources */,
 				D1A080DE1FD55E6900643CEE /* CleanUITestUITests.swift in Sources */,
 				D1A080EB1FD55FF000643CEE /* UITestCase.swift in Sources */,
