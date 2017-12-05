@@ -17,8 +17,8 @@ class HomeScreenAction: ScreenAction {
     typealias AppActionType = HomeScreenAppAction
     var appAction:HomeScreenAppAction = HomeScreenAppAction()
     
-    func tapShowCatsButton(file: String = #file, line: UInt = #line) {
-        appAction.tapButton(id: "Show Cats", file: file, line: line)
+    func tapShowCatsButton(log: Log = Log()) {
+        appAction.tapButton(id: "Show Cats", log: log)
     }
 }
 
